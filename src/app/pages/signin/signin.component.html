@@ -1,0 +1,60 @@
+<div class="signin-container scrollable">
+    <div class="ion-padding ion-text-center mar-auto w-50">
+        <img src="assets/img/logo.png" class="p-t-50">
+        <form [formGroup]="ionicForm" (ngSubmit)="onLogin()" novalidate>
+        <div class="signup=group ion-padding-top ion-padding-bottom">
+            <h4 class="text-color-white">Sign In</h4>
+            <div class="ion-text-left">
+                <ion-input class="ion-margin-top input-display border-rad-20" type="email" formControlName="email" 
+                    placeholder="example@example.com"></ion-input>
+                    <ion-text color="primary" class="mb-5">
+                        <span class="error ion-padding-start f-13" *ngIf="isSubmitted && errorControl.email.errors?.required">
+                          Email is required.
+                        </span></ion-text>
+              
+                      <ion-text color="primary" class="mb-5">
+                        <span class="error ion-padding-start f-13" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+                          Please provide valid email id.
+                        </span></ion-text>
+
+                <ion-input class="ion-margin-top border-rad-20 pass" type="password" formControlName="password" placeholder="******"></ion-input>
+                <ion-text color="primary" class="mb-5">
+                    <span class="error ion-padding f-13" *ngIf="isSubmitted && errorControl.password.errors?.required">
+                      Password is required.
+                    </span>
+                  </ion-text>
+                  <ion-text color="primary" class="mb-5">
+                    <span class="error ion-padding f-13" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+                      password must be atleast 8 characters.
+                    </span>
+                  </ion-text>
+            </div>
+            <button class="ion-margin-top buttons border-rad-20 text-color-white" type="submit">Sign
+                In</button>
+        </div>
+    </form>
+        <ion-label class="ion-padding-top text-color-white">Forget login details? <span class="link"
+                [routerLink]="['/forget']">Reset</span></ion-label>
+        <div class="mt-50 ">
+            <ion-label class="ion-padding-top text-color-white">Or use one of your social profiles</ion-label>
+            <div class="ion-padding-top ion-padding-bottom">
+                <ion-row>
+                    <ion-col size="6">
+                        <ion-button fill="clear" expand="block" class="third-party-login">
+                            <ion-icon class="icons" name='logo-facebook'></ion-icon><span
+                                class="icons-label">Facebook</span></ion-button>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-button fill="clear" expand="block" class="third-party-login">
+                            <ion-icon class="icons" name='logo-google'></ion-icon><span
+                            class="icons-label">Google</span></ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <ion-label class="ion-padding-top text-color-white">Don’t have an account? <span [routerLink]="['/signup']"
+                    class="link">Sign Up Now</span></ion-label>
+        </div>
+    </div>
+
+
+</div>

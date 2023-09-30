@@ -1,0 +1,38 @@
+.checkbox-dec{
+    background: #ccc;
+    --checkbox-background-checked: #9D8EDB;
+    --checkmark-color: #0F0637;
+    padding: 1px;
+    --border-color-checked: #0F0637;
+    --border-width: 0;
+    --checkbox-background: #9D8EDB;
+
+}
+
+.scrollable {
+    height: 325px;
+}
+
+@media (min-width: 360px) and (max-width: 690px) {
+    .w-50{
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 920px) and (max-width: 1120px) {
+    .w-50{
+      width: 35%;
+    }
+  }
+  
+  @media (min-width: 1121px) {
+    .w-50{
+      width: 30%;
+    }
+  }
+
+  @media (min-height: 740px) {
+    .scrollable {
+        min-height: 350px;
+    }
+  }

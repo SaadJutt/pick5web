@@ -1,0 +1,124 @@
+<div class="leaderboard-container">
+  <div class="ion-padding mar-auto w-50">
+    <div>
+      <img (click)="back()" src="assets/img/back.png" />
+      <span class="floatRight">
+        <img class="imgSize" src="assets/img/demo.png" />
+        <span class="text-color-white"> $4.00 </span>
+      </span>
+    </div>
+
+    <div class="ion-padding-top text-color-white">
+      <h3 class="font-w-700">Leader Board</h3>
+      <ion-row>
+        <ion-col>
+          <ion-label>Overall Rank: <span class="color-dan">41/100 </span></ion-label>
+        </ion-col>
+        <ion-col >
+          <ion-label style="float: right;">Concert Played: <span class="color-dan">12 </span></ion-label>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="ion-padding-top">
+      <ion-row>
+        <ion-col class="ion-padding ion-text-center leader-icon-bg text-color-white">
+          <img class="img-src" src="assets/img/demo.png"> <br>
+          <ion-label class="font-w-700">{{topRanker.top_point1}}</ion-label>
+        </ion-col>
+        <ion-col class="ion-padding ion-text-center leader-icon-bg-2 text-color-white">
+          <img class="img-src" src="assets/img/demo.png"> <br>
+          <ion-label class="font-w-700">{{topRanker.top_point2}}</ion-label>
+        </ion-col>
+        <ion-col class="ion-padding ion-text-center leader-icon-bg-3 text-color-white">
+          <img class="img-src" src="assets/img/demo.png"> <br>
+          <ion-label class="font-w-700">{{topRanker.top_point3}}</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-padding ion-text-center text-color-white">
+          <ion-label>{{topRanker.name1}}</ion-label>
+        </ion-col>
+        <ion-col class="ion-padding ion-text-center text-color-white">
+          <ion-label>{{topRanker.name2}}</ion-label>
+        </ion-col>
+        <ion-col class="ion-padding ion-text-center text-color-white">
+          <ion-label>{{topRanker.name3}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="ion-padding-top">
+      <ion-row>
+        <ion-col size="6">
+          <button
+            [ngClass]="isActive ? 'activeBtn' : 'bandList-button'"
+           (click)="isBand()"
+           id="open-modal"
+          >
+            <span class="bandbtn-dec">
+              <img src="assets/img/bandlist-music.png" /> </span
+            >By Band
+          </button>
+        </ion-col>
+        <ion-col size="6">
+          <button
+            [ngClass]="!isActive ? 'activeBtn' : 'bandList-button'"
+            (click)="isYear()"
+            id="open-modal-Date"
+          >
+            <span class="bandbtn-dec" >
+              <img src="assets/img/upcomming.png" /> </span
+            >By Year, Date
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-item *ngFor="let band of bandList" (click)="confirm(band.id)">
+              <ion-label>{{band.name}}</ion-label>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <ion-modal trigger="open-modal-Date" (willDismiss)="onWillDismissDate($event)" #dateModal>
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancelDate()">Cancel</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-datetime displayFormat="MMM DD, YYYY" max="2030" min="1900" [(ngModel)]="mydate" (ionChange)="confirmDate()"></ion-datetime>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <div class="ion-padding-top text-color-white leaderboard-scroll">
+
+      <ion-row *ngFor="let i of leaderBoard" class="leader-row leaderboard-row" (click)="byBand()">
+        <ion-col class="ma pt-10" size="2" style="padding-top: 13px; padding-left: 8px;">
+          <img width="50" height="50" src="assets/img/demo.png" >
+        </ion-col>
+        <ion-col class="ma" size="9">{{i.name}}</ion-col>
+        <ion-col class="ma ion-text-center"size="1">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+    </div>
+  </div>
+</div>

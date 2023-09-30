@@ -1,0 +1,61 @@
+<div class="ion-padding container2 scrollable">
+
+    <div class="ion-text-center">
+        <div class="profile-container">
+            <img class="profile-image" src="assets/img/demo.png">
+
+        </div>
+        <h5 class="cat-label font-w-700">{{name}}</h5>
+        <p class="cat-label">{{email}}</p>
+    </div>
+                
+    <ion-grid class="mb-40 w-50">
+        <ion-row>
+            <ion-col (click)="bandList()" class="grid-container ion-text-center">
+                <div class="icon-container">
+                    <img src="assets/img/homeicon1.png">
+                </div>
+                <p class="cat-label">Bands & Concerts</p>
+            </ion-col>
+            <ion-col (click)="isLeaderBoard()" class="grid-container ion-text-center">
+                <div class="icon-container">
+                    <img src="assets/img/homeicon3.png">
+                </div>
+                <p class="cat-label">Leaderboard</p>
+            </ion-col>
+        </ion-row>
+        <!-- <ion-row>
+            <ion-col (click)="isLeaderBoard()" class="grid-container ion-text-center">
+                <div class="icon-container">
+                    <img src="./../../../assets/img/homeicon3.png">
+                </div>
+                <p class="cat-label">Leaderboard</p>
+            </ion-col>
+            <ion-col (click)="isPlayingHistory()" class="grid-container ion-text-center">
+                <div class="icon-container">
+                    <img src="./../../../assets/img/homeicon4.png">
+                </div>
+                <p class="cat-label">Playing History</p>
+            </ion-col>
+        </ion-row> -->
+        <ion-row>
+            <ion-col (click)="isProfile()" class="grid-container ion-text-center">
+                <div class="icon-container">
+                    <img src="assets/img/homeicon6.png">
+                </div>
+                <p class="cat-label">Profile</p>
+            </ion-col>
+            <ion-col class="grid-container ion-text-center" style="background: none;">
+                <!-- <div class="icon-container">
+                    <img src="./../../../assets/img/homeicon6.png">
+                </div>
+                <p class="cat-label">Profile</p> -->
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+   
+
+
+</div>
+<!-- -->

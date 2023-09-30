@@ -1,0 +1,46 @@
+<div class="forget-container text-color-white">
+  <div class="ion-padding mar-auto w-50">
+    <div>
+      <img (click)="back()" src="assets/img/back.png" />
+      <span class="floatRight">
+        <img class="imgSize" src="assets/img/demo.png" />
+        <span class="text-color-white"> $4.00 </span>
+      </span>
+
+      <h3 class="font-w-700">Add Funds</h3>
+
+      <div class="scrollable ion-text-center" style="margin-top: 70px">
+        <h4 class="font-w-700 text-color-white">Saved Account:******1234</h4>
+        <ion-label class="payment-color"
+          >Remove your Bank Account
+          <span class="color-dan">Click Here</span></ion-label
+        >
+
+        <h3 class="font-w-700 text-color-white" style="margin-top: 50px">
+          Add Amount:
+        </h3>
+
+        <ion-input
+          class="ion-margin-top border-rad-15 paymentInput ion-padding-left"
+          placeholder="$20"
+          type="text"
+          name=""
+        ></ion-input>
+        <div class="ion-margin-top">
+          <ion-label class="payment-color"
+            >View Terms & Conditions<span class="color-dan"
+              >Click Here</span
+            ></ion-label
+          >
+        </div>
+
+        <button
+          class="ion-margin-top buttons border-rad-20 text-color-white"
+          (click)="payout()"
+        >
+          Pay
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

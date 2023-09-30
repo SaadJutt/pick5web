@@ -1,0 +1,142 @@
+<div class="container3">
+  <div class="ion-padding mar-auto w-50">
+    <div>
+      <img (click)="back()" src="assets/img/back.png" />
+      <span class="floatRight">
+        <img class="imgSize" src="assets/img/demo.png" />
+        <span class="text-color-white"> $4.00 </span>
+      </span>
+    </div>
+
+    <div class="ion-padding-top text-color-white">
+      <ion-row>
+        <ion-col class="ma"><h3 style="margin: 0;">Jesicca</h3></ion-col>
+        <ion-col class="ma"> <ion-label style="font-size: 14px;">Overall Rank: 40/100</ion-label></ion-col>
+      </ion-row>
+    </div>
+
+    <div class="ion-padding-top w-35 mar-auto">
+      <ion-row>
+        <ion-col size="2"></ion-col>
+        <ion-col class="ion-text-center  text-color-white" size="4" (click)="playing()">
+          <div class="by-band-icon1">
+            <h5 class="font-w-700 by-band-iconItem">Played</h5>
+            <ion-label class="font-w-700">36</ion-label>
+          </div>
+         
+        </ion-col>
+        <ion-col class="ion-text-center  text-color-white" size="4">
+          <div class="by-band-icon2">
+            <h5 class="font-w-700 by-band-iconItem">Won</h5>
+            <ion-label class="font-w-700">6</ion-label>
+          </div>
+         
+        </ion-col>
+        <ion-col size="2"></ion-col>
+        <!-- <ion-col class="ion-text-center  text-color-white" size="4">
+          <div class="by-band-icon3">
+            <h5 class="font-w-700 by-band-iconItem">Lost</h5>
+            <ion-label class="font-w-700">30</ion-label>
+          </div>
+        </ion-col> -->
+      </ion-row>
+    </div>
+
+
+    <div class="ion-padding-top">
+      <ion-row>
+        <ion-col size="6">
+          <button
+            [ngClass]="isActive ? 'activeBtn' : 'bandList-button'"
+            (click)="isBand()"
+          >
+            <span class="bandbtn-dec">
+              <img src="assets/img/bandlist-music.png" /> </span
+            >By Band
+          </button>
+        </ion-col>
+        <ion-col size="6">
+          <button
+            [ngClass]="!isActive ? 'activeBtn' : 'bandList-button'"
+            (click)="isConcert()"
+          >
+            <span class="bandbtn-dec">
+              <img src="assets/img/upcomming.png" /> </span
+            >By Concert
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div [hidden]="isBandListFlag">
+
+      <div>
+        <ion-row class="text-color-white">
+          <ion-col size="6">
+            <h4>Band Name</h4>
+          </ion-col>
+          <ion-col size="6">
+            <h4 style="float: right;">Played</h4>
+          </ion-col>
+        </ion-row>
+      </div>
+  
+      <div class="byBabdScroll " >
+        <ion-row *ngFor="let i of isByBand" class="text-color-white byband-row">
+          <ion-col size="1" class="pad-left">
+            <img src="assets/img/homeicon1.png" height="20" width="20">
+          </ion-col>
+          <ion-col size="10" class="pad7">
+            <ion-label>{{i.bandName}}</ion-label>
+          </ion-col>
+          <ion-col size="1" class="pad7 color-dan pad-left">
+            <ion-label>{{i.bandPoints}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+
+    </div>
+
+    <div [hidden]="!isBandListFlag">
+
+      <div>
+        <ion-row class="text-color-white">
+          <ion-col size="4">
+            <h4 class="font16">Band Name</h4>
+          </ion-col>
+          <ion-col size="4">
+            <h4 class="font16">Location</h4>
+          </ion-col>
+          <ion-col size="2" class="pad6-0">
+            <h4 class="font16">Date</h4>
+          </ion-col>
+          <ion-col size="2" class="pad6-0">
+            <h4 class="font16">Score</h4>
+          </ion-col>
+        </ion-row>
+      </div>
+  
+      <div class="byBabdScroll " >
+        <ion-row *ngFor="let i of isByConcert" class="text-color-white byband-row byConcert-row ">
+          <ion-col size="4">
+            <ion-label>{{i.bandName}}</ion-label>
+          </ion-col>
+          <ion-col size="4" >
+            <ion-label>{{i.location}}</ion-label>
+          </ion-col>
+          <ion-col size="2" class=" color-dan pad6-0">
+            <ion-label>{{i.date}}</ion-label>
+          </ion-col>
+          <ion-col size="2" class="color-dan pad6-0">
+            <ion-label>{{i.score}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+
+    </div>
+
+    
+  </div>
+
+  
+</div>

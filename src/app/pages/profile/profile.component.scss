@@ -1,0 +1,41 @@
+.scrollable {
+    overflow-y: scroll;
+    height: 560px;
+}
+
+
+@media (min-width: 375px) and (max-width: 400px) {
+    .scrollable {
+        overflow-y: scroll;
+        height: 400px;;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+    .scrollable {
+        overflow-y: scroll;
+        height: 350px;
+    }
+}
+
+@media (min-width: 375px) and (min-height: 812px) {
+    .scrollable {
+        overflow-y: scroll;
+        height: 525px;
+    }
+}
+
+
+@media (min-width: 390px) and (min-height: 844px) {
+    .scrollable {
+        overflow-y: scroll;
+        height: 560px;
+    }
+}
+
+@media (min-width: 414px) and (min-height: 896px) {
+    .scrollable {
+        overflow-y: scroll;
+        height: 615px;
+    }
+}

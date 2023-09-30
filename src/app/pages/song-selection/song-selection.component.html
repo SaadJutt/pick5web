@@ -1,0 +1,136 @@
+<div class=" select-song">
+  <div class="w-50 mar-auto">
+
+    <div class="ion-padding">
+      <div>
+        <img (click)="back()" src="assets/img/back.png" />
+        <span class="floatRight">
+          <img class="imgSize" src="assets/img/demo.png" />
+          <span class="text-color-white"> $4.00 </span>
+        </span>
+      </div>
+  
+      <h6 class="color-dan">20$ <span class="text-color-white ml-30">Bearly Dead- Concert Schedule</span></h6>
+      <ion-progress-bar class="select-progress" [value]="progress"></ion-progress-bar>
+    </div>
+  
+      <div class="select-song-scroll mt-8">
+        <div class="ion-padding">
+          <ion-row class="row-dec song-border">
+            <ion-col size="2" class="padr">
+              <ion-input class="select-song-input" type="text" placeholder="opener" readonly></ion-input>
+               
+            </ion-col>
+            <ion-col size="10" class="padl">
+              <ion-item class="select-song-item select-song-input">
+                <select aria-label="song" (change)="selectSongOpener($event, opener)" class="select-song-option" value="opener" [(ngModel)]="opener">
+                  <option *ngFor="let song of band_songs" value="{{song.id}}" >{{song.song_title}}</option>
+                </select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+    
+          <ion-row class="row-dec song-border">
+            <ion-col size="2" class="padr">
+              <ion-input class="select-song-input" type="text" placeholder="1" readonly></ion-input>
+               
+            </ion-col>
+            <ion-col size="10" class="padl">
+              <ion-item class="select-song-item select-song-input">
+                <select aria-label="song" (change)="selectSongOne($event, one)" class="select-song-option" value="one" [(ngModel)]="one">
+                  <option *ngFor="let song of band_songs" value="{{song.id}}" >{{song.song_title}}</option>
+                </select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+    
+          <ion-row class="row-dec song-border">
+            <ion-col size="2" class="padr">
+              <ion-input class="select-song-input" type="text" placeholder="2" readonly></ion-input>
+               
+            </ion-col>
+            <ion-col size="10" class="padl">
+              <ion-item class="select-song-item select-song-input">
+                <select aria-label="song" (change)="selectSongTwo($event, two)" class="select-song-option" value="two" [(ngModel)]="two">
+                  <option *ngFor="let song of band_songs" value="{{song.id}}" >{{song.song_title}}</option>
+                </select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+    
+          <ion-row class="row-dec song-border">
+            <ion-col size="2" class="padr">
+              <ion-input class="select-song-input" type="text" placeholder="3" readonly></ion-input>
+               
+            </ion-col>
+            <ion-col size="10" class="padl">
+              <ion-item class="select-song-item select-song-input">
+                <select aria-label="song" (change)="selectSongThree($event, three)" class="select-song-option" value="three" [(ngModel)]="three">
+                  <option *ngFor="let song of band_songs; let index = index" value="{{song.id}}" >{{song.song_title}}</option>
+                </select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+    
+          <ion-row class="row-dec song-border">
+            <ion-col size="2" class="padr">
+              <ion-input class="select-song-input" type="text" placeholder="4" readonly></ion-input>
+               
+            </ion-col>
+            <ion-col size="10" class="padl">
+              <ion-item class="select-song-item select-song-input">
+                <select aria-label="song" (change)="selectSongFour($event, four)" class="select-song-option" value="four" [(ngModel)]="four">
+                  <option *ngFor="let song of band_songs" value="{{song.id}}" >{{song.song_title}}</option>
+                </select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+    
+          <ion-row class="row-dec song-border">
+            <ion-col size="2" class="padr">
+              <ion-input class="select-song-input" type="text" placeholder="5" readonly></ion-input>
+               
+            </ion-col>
+            <ion-col size="10" class="padl">
+              <ion-item class="select-song-item select-song-input">
+                <select aria-label="song" (change)="selectSongFive($event, five)" class="select-song-option" value="five" [(ngModel)]="five">
+                  <option *ngFor="let song of band_songs" value="{{song.id}}" >{{song.song_title}}</option>
+                </select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+           <ion-row class="row-dec song-border">
+            <ion-col size="2" class="padr">
+              <ion-input class="select-song-input" type="text" placeholder="Enclose" readonly></ion-input>
+               
+            </ion-col>
+            <ion-col size="10" class="padl">
+              <ion-item class="select-song-item select-song-input">
+                <select aria-label="song" (change)="selectSongEnclose($event, enclose)" class="select-song-option" value="enclose" [(ngModel)]="enclose">
+                  <option *ngFor="let song of band_songs" value="{{song.id}}" >{{song.song_title}}</option>
+                </select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+    
+          <button class="ion-margin-top buttons border-rad-20 text-color-white" *ngIf="isnewSelect" (click)="isSetSong()">Continue</button>
+          <button class="ion-margin-top buttons border-rad-20 text-color-white" *ngIf="!isnewSelect"  (click)="isUpdateData()">Continue</button>
+        </div>
+        
+     
+        <div class="ion-padding text-color-white" style="background: #0D0534;">
+          <h3>Leaderboard</h3>
+          <ion-row *ngFor="let i of leaderBoard" class="leader-row">
+            <ion-col class="ma" size="3">
+              <img width="50" height="50" src="assets/img/demo.png" >
+            </ion-col>
+            <ion-col class="ma" size="6">{{i.name}}</ion-col>
+            <ion-col class="ma"size="3">{{i.points}}</ion-col>
+          </ion-row>
+        </div>
+  </div>
+  </div>
+
+  
+</div>

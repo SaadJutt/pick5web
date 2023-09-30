@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="ion-padding ion-text-center mar-auto w-50">
+        <img src="assets/img/logo.png" class="p-t-50">
+        <form [formGroup]="ionicForm" (ngSubmit)="onSignup()" novalidate>
+        <div class="signup=group ion-padding-top ion-padding-bottom">
+            <h4 class="text-color-white">Sign Up</h4>
+            <div class="ion-text-left">
+               
+                <ion-input class="ion-margin-top input-display border-rad-20" formControlName="name" type="text" placeholder="Name" required></ion-input>
+                <ion-text class="mb-5" color="primary">
+                    <span class="error ion-padding-start f-13" *ngIf="isSubmitted && errorControl.name.errors?.required">
+                      Name is required.
+                    </span></ion-text>
+                <ion-text class="mb-5" color="primary">
+                    <span class="error ion-padding-start f-13" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+                      Name must be atleast 3 characters.
+                    </span></ion-text>
+
+                <ion-input class="ion-margin-top input-display border-rad-20" formControlName="email" type="email" placeholder="example@example.com" required></ion-input>
+                <ion-text color="primary" class="mb-5">
+                    <span class="error ion-padding-start f-13" *ngIf="isSubmitted && errorControl.email.errors?.required">
+                      Email is required.
+                    </span></ion-text>
+          
+                  <ion-text color="primary" class="mb-5">
+                    <span class="error ion-padding-start f-13" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+                      Please provide valid email id.
+                    </span></ion-text>
+
+                <ion-input class="ion-margin-top border-rad-20 pass"  formControlName="password" type="password" placeholder="******" required></ion-input>
+             
+                        <ion-text color="primary" class="mb-5">
+                            <span class="error ion-padding f-13" *ngIf="isSubmitted && errorControl.password.errors?.required">
+                              Password is required.
+                            </span>
+                          </ion-text>
+                          <ion-text color="primary" class="mb-5">
+                            <span class="error ion-padding f-13" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+                              password must be atleast 8 characters.
+                            </span>
+                          </ion-text>
+
+                <table class="ion-margin-top">
+                    <tr>
+                        <td class="pad-bot-8">
+                            <ion-checkbox class="checkbox-dec" [checked]="false" formControlName="agreement"></ion-checkbox>
+                        </td>
+                        <td class="ion-padding-left text-color-white font-14 pad-left-7" style="    vertical-align: top; padding-top: 2px;">
+                            <ion-label >I agree to the Term of Services and Privacy Policy</ion-label>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <button class="ion-margin-top buttons border-rad-20 text-color-white" type="submit">Continue</button>
+        </div>
+    </form>
+        <ion-label class="ion-padding-top text-color-white">Have an account? <span class="link" [routerLink]="['/login']">Sign in</span></ion-label>
+    </div>
+</div>

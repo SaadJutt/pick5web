@@ -1,0 +1,3 @@
+export const ERR_AUTHENTICATION_CODE = 401;
+export const ERR_FORBIDDEN_CODE = 403;
+export const ERR_VALDATION_CODE = 422;

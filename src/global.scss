@@ -1,0 +1,544 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+.container {
+  background: url("./assets/img/background1.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container3 {
+  background: url("./assets/img/Bandlist-bg.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.leaderboard-container {
+  background: url("./assets/img/Leadboard-bg.png");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.select-song {
+  background: url("./assets/img/songselection-bg.png");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.select-progress{
+  --progress-background: linear-gradient(90deg, rgba(119,0,114,1) 0%, rgba(33,107,238,1) 100%);
+  height: 8px;
+}
+@media (min-width: 360px) and (max-width: 640px)  {
+ 
+}
+  @media (min-width: 360px) and (max-width: 740px) {
+    .content-scroll {
+        overflow-y: scroll;
+        height: 35%;
+    }
+    .band-upcoming-scroll {
+        overflow-y: scroll;
+        height: 45%;
+    }
+    .scrollable {
+      overflow-y: scroll;
+      height: 67%;
+  }
+  }
+
+  .mt-8{
+    margin-top: 8px;
+  }
+
+  .ma{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 17px;
+  }
+  .leader-row {
+    background: url('./assets/img/selectLeader.png');
+    height: 75px;
+    background-size: cover;
+    border: 1px solid #1a0e53;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 1px #1a0e53;
+    padding-bottom: 15px;
+  
+  }    
+
+  .leaderboard-row {
+    background: url('./assets/img/leaderboard-item.png');
+    box-shadow: none;
+    background-size: cover;
+  }
+  .select-song-scroll{
+    overflow-y: scroll;
+    height: 53%;
+  }
+
+  .sc-ion-input-md-h{
+    --highlight-color: none;
+}
+
+.container4 {
+  background: url("./assets/img/background3.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.signin-container {
+  background: url("./assets/img/signin.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.forget-container {
+  background: url("./assets/img/Forgot-bg.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container2 {
+  background: url("./assets/img/bg2.png");
+  height: 100%;
+  background-size: cover;
+}
+
+.color-man {
+  color: #3f2f85;
+}
+
+.p-t-50 {
+  padding-top: 50px;
+}
+
+.pt-10 {padding-top: 10px;}
+.p-t-8 {
+  padding-top: 8px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.padding-col {
+  padding: 17px 30px;
+}
+
+.text-color-white {
+  color: #ffff;
+}
+
+.font-w-800 {
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.font-w-700 {
+  font-weight: 700;
+}
+
+.input-display,
+.pass {
+  background: white;
+  height: 50px;
+}
+
+.select-song-input{
+  background: #fff;
+  height: 55px;
+  border-radius: 10px;
+}
+
+.searchInput {
+  background: #18027b ;
+  color: white;
+  height: 50px;
+}
+
+.paymentInput {
+  background: #14045A;
+  color: white;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.paymentInput .input-wrapper {
+  padding-left: 15px;
+}
+
+.searchInput::after {
+  content: url('./assets/img/search.png');
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+}
+
+.input-display:after {
+  content: "";
+  background: url("./assets/img/email.png");
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  height: 35px;
+  z-index: 99999;
+  /* top: 74px; */
+  width: 35px;
+  padding-right: 4px;
+  top: 9px;
+  left: 9px;
+  background-size: cover;
+}
+
+.pass:after {
+  content: "";
+  background: url("./assets/img/lock2.png");
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  height: 35px;
+  z-index: 99999;
+  /* top: 74px; */
+  width: 35px;
+  padding-right: 4px;
+  top: 9px;
+  left: 9px;
+  background-size: cover;
+}
+
+.input-display .input-wrapper,
+.pass .input-wrapper, .select-song-input .input-wrapper {
+  padding-left: 55px;
+  color: #0f0637;
+}
+
+.searchInput .input-wrapper, .select-song-input .input-wrapper{
+  padding-left: 15px;
+}
+
+.select-song-input{
+  vertical-align: top;
+}
+
+.pass .input-wrapper {
+  padding-top: 8px;
+  color: #0f0637;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.pad-left-7 {
+  padding-left: 7px;
+}
+
+.pad-bot-8 {
+  padding-bottom: 8px;
+}
+
+.pt-12 {
+  padding-top: 12px;
+}
+
+.pad-t-15 {
+  padding-top: 15px;
+}
+
+.padr {
+  padding: 0;
+  padding-right: 5px;
+}
+
+.padl {
+  padding: 0;
+  padding-left: 5px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.buttons {
+  width: 100%;
+  height: 55px;
+  background: #ff6624;
+  font-size: 17px;
+}
+
+.link {
+  color: #ff6624;
+}
+
+.border-rad-20 {
+  border-radius: 17px;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.mar-auto {
+  margin: auto;
+}
+
+@media (min-width: 360px) and (max-width: 690px) {
+  .w-50{
+    width: 80%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff6624; 
+  border-radius: 10px;
+}
+
+.login-btn {
+  width: 375px;
+  height: 55px;
+  background: #ffe;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.icons {
+  font-size: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icons-label {
+  vertical-align: middle;
+}
+
+.profile-container {
+  height: 105px;
+  width: 105px;
+  background: url("./assets/img/profile-bg.png");
+  background-size: cover;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.grid-container {
+  height: 135px;
+  background: url("./assets/img/homeicon-bg.png");
+  background-size: cover;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.icon-container {
+  height: 70px;
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #130068;
+  margin-top: 12px;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.cat-label {
+  padding: 0;
+  margin: 5px;
+  color: white;
+}
+
+.profile-image {
+  height: 85px;
+  width: 85px;
+}
+
+.tab-container {
+  --background: #0f0637;
+  border-radius: 25px 25px 0 0;
+}
+
+.tab-button-color {
+  color: #392f64;
+}
+
+.floatRight {
+  float: right;
+}
+
+.imgSize {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+
+.row-dec {
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, #770072, #216bee) 1 0 0 0;
+  padding: 5px;
+}
+
+.song-border{
+  border-top: 2px solid;
+
+}
+
+.row-dec:last-child {
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, #770072, #216bee) 1 0 1 0;
+  padding: 5px;
+}
+
+.music-icon {
+  width: 25px;
+  height: 25px;
+  background: url("./assets/img/banklist-item.png");
+  border-radius: 50%;
+  padding: 4px;
+  background-size: cover;
+}
+
+.bandList-button {
+  padding: 10px;
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #df018c, #007eff) 1 1 1 1;
+  color: white;
+}
+
+.activeBtn {
+  padding: 10px;
+  width: 100%;
+  height: 35px;
+  border-radius: 10px;
+  background: url("./assets/img/btn-bg.png");
+  background-size: cover;
+  color: white;
+}
+
+.bandbtn-dec {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.color-dan {
+  color: #FF6624;
+}
+
+.band-Upcom {
+  font-size: 12px;
+  margin: 0;
+  padding-top: 8px;
+}
+
+.band-row {
+  background: #100057;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.byBabdScroll {
+  overflow-y: scroll;
+  height: 215px;
+}
+
+.band-row:last-child {
+  margin-bottom: 65px;
+}
+
+.icon-color {
+  color: #0f0637;
+}
+
+.scrollable {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.header-bandlist{
+    background: #120063;
+    box-shadow: none;
+}
+
+.leader-icon-bg, .leader-icon-bg-2, .leader-icon-bg-3{
+  background: url('./assets/img/leaderboard-icon-bg.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px ;
+  margin: 0 5px;
+}
+
+.leader-icon-bg-2 {
+  background: url('./assets/img/leaderboard-icon2.png');
+  background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.leader-icon-bg-3 {
+  background: url('./assets/img/leaderboard-icon3.png');
+  background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.payment-color{
+  color: #9D8EDB;
+}

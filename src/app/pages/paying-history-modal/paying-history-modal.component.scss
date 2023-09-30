@@ -1,0 +1,53 @@
+.forget-container {
+    height: auto;
+}
+
+.searchInput {
+    background: #18027B;
+    color: white;
+}
+
+.searchInput .native-wrapper {
+    padding-left: 15px;
+}
+
+.byBabdScroll {
+    height: 450px;
+}
+
+@media (min-width: 375px) and (max-width: 400px) {
+    .byBabdScroll {
+        overflow-y: scroll;
+        height: 370px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+    .byBabdScroll {
+        overflow-y: scroll;
+        height: 450px;
+    }
+}
+
+@media (min-width: 375px) and (min-height: 812px) {
+    .byBabdScroll {
+        overflow-y: scroll;
+        height: 525px;
+    }
+}
+
+
+@media (min-width: 390px) and (min-height: 844px) {
+    .byBabdScroll {
+        overflow-y: scroll;
+        height: 555px;
+    }
+}
+
+
+@media (min-width: 768px) and (min-height: 1024px){
+    .byBabdScroll {
+        overflow-y: scroll;
+        height: 730px;
+    }
+}

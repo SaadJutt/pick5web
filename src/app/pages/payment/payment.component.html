@@ -1,0 +1,71 @@
+<div class="forget-container text-color-white">
+  <div class="ion-padding">
+    <div class="w-50 mar-auto">
+      <img (click)="back()" src="assets/img/back.png" />
+      <span class="floatRight">
+        <img class="imgSize" src="assets/img/demo.png" />
+        <span class="text-color-white"> $4.00 </span>
+      </span>
+
+      <h3 class="font-w-700">Payments</h3>
+
+      <div class="ion-text-center">
+        <img width="70" src="assets/img/payment-icon.png" />
+        <h2 class="font-w-700">
+          Amount to be Paid: <span class="color-dan">$20</span>
+        </h2>
+        <h4 class="font-w-700 payment-color">Pay for Predections</h4>
+        <ion-label class="payment-color">Use your credit/debit card</ion-label>
+      </div>
+
+      <div></div>
+
+      <div class="scrollable">
+        <ion-input
+          class="ion-margin-top border-rad-15 paymentInput ion-padding-left"
+          placeholder="Card Number"
+          type="text"
+          name=""
+        ></ion-input>
+        <ion-row>
+          <ion-col size="7" style="padding: 0 5px 0 0;">
+            <ion-input
+              class="ion-margin-top border-rad-15 paymentInput ion-padding-left"
+              placeholder="MM/YYYYY"
+              type="text"
+              name=""
+            ></ion-input
+          ></ion-col>
+          <ion-col size="5" style="padding: 0 0 0 5px;">
+            <ion-input
+              class="ion-margin-top border-rad-15 paymentInput ion-padding-left"
+              placeholder="CVV"
+              type="text"
+              name=""
+            ></ion-input
+          ></ion-col>
+        </ion-row>
+        <ion-input
+          class="ion-margin-top border-rad-15 paymentInput ion-padding-left"
+          placeholder="Card Holder Name"
+          type="text"
+          name=""
+        ></ion-input>
+
+        <table class="ion-margin-top">
+          <tr>
+              <td class="pad-bot-8">
+                  <ion-checkbox class="checkbox-dec"></ion-checkbox>
+              </td>
+              <td class="ion-padding-left text-color-white font-14 pad-left-7" style="    vertical-align: top;">
+                  <ion-label class="payment-color">Save information for future</ion-label>
+              </td>
+          </tr>
+      </table>
+      <button class="ion-margin-top buttons border-rad-20 text-color-white" (click)="payout()">Pay</button>
+      <button class="ion-margin-top buttons border-rad-20 text-color-white" (click)="back()" style="background: none;
+      color: #ff6624;">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

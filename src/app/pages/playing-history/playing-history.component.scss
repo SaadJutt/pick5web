@@ -1,0 +1,46 @@
+.forget-container {
+    height: auto;
+}
+
+.searchInput {
+    background: #18027B;
+    color: white;
+}
+
+.searchInput .native-wrapper {
+    padding-left: 15px;
+}
+
+.byBabdScroll {
+    height: 330px;
+}
+
+@media (min-width: 360px) and (max-width: 690px) {
+    .w-50{
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 691px) and (max-width: 919px) {
+    .w-50{
+      width: 75%;
+    }
+  }
+  
+  @media (min-width: 920px) and (max-width: 1120px) {
+    .w-50{
+      width: 55%;
+    }
+  }
+  
+  @media (min-width: 1121px) {
+    .w-50{
+      width: 50%;
+    }
+  }
+
+  @media (min-height: 740px) {
+    .scrollable {
+        min-height: 350px;
+    }
+  }

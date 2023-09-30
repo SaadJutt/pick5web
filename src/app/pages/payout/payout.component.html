@@ -1,0 +1,56 @@
+<div class="forget-container text-color-white">
+  <div class="ion-padding">
+    <div class="w-50 mar-auto">
+      <img (click)="back()" src="assets/img/back.png" />
+      <span class="floatRight">
+        <img class="imgSize" src="assets/img/demo.png" />
+        <span class="text-color-white"> $4.00 </span>
+      </span>
+
+      <h3 class="font-w-700">Pay Out</h3>
+
+      <div class="ion-text-center">
+        <img width="60" src="assets/img/payout-icon.png" />
+        <h2 class="font-w-700">
+          Pay Out Amount
+        </h2>
+        
+      </div>
+
+      <div></div>
+
+      <div class="scrollable">
+        <ion-input
+          class="ion-margin-top border-rad-15 paymentInput ion-padding-left"
+          placeholder="Card Number"
+          type="text"
+          name=""
+        ></ion-input>
+        <div class="ion-text-center">
+          <h4 class="font-w-700 payment-color">Pay Out to Bank</h4>
+        <ion-label class="payment-color">Add your bank account number</ion-label>
+        </div>
+        
+        <ion-input
+          class="ion-margin-top border-rad-15 paymentInput ion-padding-left"
+          placeholder="Card Holder Name"
+          type="text"
+          name=""
+        ></ion-input>
+
+        <table class="ion-margin-top">
+          <tr>
+              <td class="pad-bot-8">
+                  <ion-checkbox class="checkbox-dec"></ion-checkbox>
+              </td>
+              <td class="ion-padding-left text-color-white font-14 pad-left-7" style="    vertical-align: top;">
+                  <ion-label class="payment-color">Save information for future</ion-label>
+              </td>
+          </tr>
+      </table>
+      <button class="ion-margin-top buttons border-rad-20 text-color-white" (click)="payout()">Submit</button>
+      
+      </div>
+    </div>
+  </div>
+</div>

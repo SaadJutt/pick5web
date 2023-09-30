@@ -1,0 +1,48 @@
+.leaderboard-scroll{
+    overflow-y: scroll;
+    height: 205px;
+}
+
+
+@media (min-width: 360px) and (max-width: 500px) {
+    .w-50{
+      width: 100%;
+    }
+    .leaderboard-scroll{
+        overflow-y: scroll;
+        min-height: 195px;
+    }
+  }
+
+  @media (min-width: 501px) and (max-width: 640px) {
+    .w-50{
+      width: 80%;
+    }
+    .leaderboard-scroll{
+        overflow-y: scroll;
+        min-height: 195px;
+    }
+  }
+  
+  @media (min-width: 920px) and (max-width: 1120px) {
+    .w-50{
+      width: 35%;
+    }
+  }
+  
+  @media (min-width: 1121px) {
+    .w-50{
+      width: 40%;
+    }
+  }
+
+  @media (min-height: 740px) {
+    .leaderboard-scroll{
+        overflow-y: scroll;
+        min-height: 375px;
+    }
+    .img-src{
+        width: 45px;
+        height: 45px;
+    };
+  }

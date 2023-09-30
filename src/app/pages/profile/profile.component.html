@@ -1,0 +1,39 @@
+<div class="ion-padding container2 ">
+  <div class="mar-auto w-50">
+    <div>
+      <img (click)="back()" src="assets/img/back.png" />
+  </div>
+      <div class="ion-text-center">
+          <div class="profile-container">
+              <img class="profile-image" src="assets/img/demo.png">
+
+          </div>
+          <h5 class="cat-label font-w-700">Maria Gotham</h5>
+          <p class="cat-label">mariagotham@pick5.com</p>
+          <p class="cat-label">$40.00</p>
+      </div>
+      <!-- <ion-grid class="mb-40">
+          <ion-row>
+              <ion-col (click)="isPaymentHistory()" class="grid-container ion-text-center">
+                  <div class="icon-container">
+                      <img src="./../../../assets/img/homeicon5.png">
+                  </div>
+                  <p class="cat-label">Paying History</p>
+              </ion-col>
+              <ion-col (click)="isPlayingHistory()" class="grid-container ion-text-center">
+                  <div class="icon-container">
+                      <img src="./../../../assets/img/homeicon4.png">
+                  </div>
+                  <p class="cat-label">Playing History</p>
+              </ion-col>
+          </ion-row>
+      </ion-grid> -->
+      <div class="scrollable">
+        <app-paying-history-modal></app-paying-history-modal>
+        <app-playing-history-modal></app-playing-history-modal>
+      </div>
+     
+
+  </div>
+</div>
+<!-- -->
